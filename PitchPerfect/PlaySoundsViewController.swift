@@ -28,6 +28,9 @@ class PlaySoundsViewController: UIViewController {
     @IBOutlet weak var stopButton: UIButton!
     
     
+    
+    
+    
     // MARK: Actions
     
     enum ButtonType: Int { case slow = 0, fast, chipmunk, vader, reverb, echo  }

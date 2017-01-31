@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 
-class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
+class RecordSoundsViewController: UIViewController{
 
     var audioRecorder: AVAudioRecorder!
     
@@ -27,13 +27,24 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         super.viewWillAppear(animated)
     }
 
+    func setUIState(isRecording: Bool, recordingText: String)
+    {
+       //
+        if isRecording == true {
+            recordButton.isEnabled = false
+            stopButton.isEnabled = true
+            recordingLabel.text = recordingText
+        } else {
+            stopButton.isEnabled = false
+            recordButton.isEnabled = true
+            recordingLabel.text = recordingText
+        }
+    }
 
     @IBAction func recordAudio(_ sender: Any) {
         
-        // change label
-        recordButton.isEnabled = false
-        stopButton.isEnabled = true
-        recordingLabel.text = "Recording in progress"
+        // change label and record button
+        setUIState(isRecording: true, recordingText: "Recording in progress")
         
         // record audio
         let dirPath = NSSearchPathForDirectoriesInDomains(.documentDirectory,.userDomainMask, true)[0] as String
@@ -55,9 +66,8 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     
     @IBAction func stopRecording(_ sender: Any) {
         
-        stopButton.isEnabled = false
-        recordButton.isEnabled = true
-        recordingLabel.text = "Recording in progress"
+        // change label and stop button
+        setUIState(isRecording: false, recordingText: "Tap to Record")
 
         audioRecorder.stop()
         let audioSession = AVAudioSession.sharedInstance() // sets it to inactive
@@ -85,7 +95,12 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
             let playSoundsVC = segue.destination as! PlaySoundsViewController
             let recordedAudioURL = sender as! NSURL
             playSoundsVC.recordedAudioURL = recordedAudioURL
+           
         }
     }
 
+}
+
+extension RecordSoundsViewController: AVAudioRecorderDelegate {
+  
 }
