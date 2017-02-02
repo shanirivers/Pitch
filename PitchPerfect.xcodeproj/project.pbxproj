@@ -14,6 +14,7 @@
 		F407CBCC1E3CE6DE006816C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F407CBCA1E3CE6DE006816C5 /* LaunchScreen.storyboard */; };
 		F480C89A1E3E9F6100B5C73B /* PlaySoundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F480C8991E3E9F6100B5C73B /* PlaySoundsViewController.swift */; };
 		F480C89C1E3EBE0A00B5C73B /* PlaysoundsviewcontrollerAudio.swift in Sources */ = {isa = PBXBuildFile; fileRef = F480C89B1E3EBE0A00B5C73B /* PlaysoundsviewcontrollerAudio.swift */; };
+		F4974AB01E410F60007CD531 /* AudioRecorderExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4974AAF1E410F60007CD531 /* AudioRecorderExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		F407CBCD1E3CE6DE006816C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F480C8991E3E9F6100B5C73B /* PlaySoundsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaySoundsViewController.swift; sourceTree = "<group>"; };
 		F480C89B1E3EBE0A00B5C73B /* PlaysoundsviewcontrollerAudio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaysoundsviewcontrollerAudio.swift; sourceTree = "<group>"; };
+		F4974AAF1E410F60007CD531 /* AudioRecorderExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioRecorderExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 			children = (
 				F407CBC11E3CE6DE006816C5 /* AppDelegate.swift */,
 				F407CBC31E3CE6DE006816C5 /* RecordSoundsViewController.swift */,
+				F4974AAF1E410F60007CD531 /* AudioRecorderExtension.swift */,
 				F480C8991E3E9F6100B5C73B /* PlaySoundsViewController.swift */,
 				F480C89B1E3EBE0A00B5C73B /* PlaysoundsviewcontrollerAudio.swift */,
 				F407CBC51E3CE6DE006816C5 /* Main.storyboard */,
@@ -147,6 +150,7 @@
 				F480C89A1E3E9F6100B5C73B /* PlaySoundsViewController.swift in Sources */,
 				F407CBC21E3CE6DE006816C5 /* AppDelegate.swift in Sources */,
 				F480C89C1E3EBE0A00B5C73B /* PlaysoundsviewcontrollerAudio.swift in Sources */,
+				F4974AB01E410F60007CD531 /* AudioRecorderExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
